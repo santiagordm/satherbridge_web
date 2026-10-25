@@ -137,7 +137,7 @@ nav .btn{font-size:14px; padding:7px 16px}
 .controls{display:flex; align-items:center; gap:12px}
 .controls button{width:44px; height:44px; border-radius:50%; border:0; background:var(--band); color:var(--text); font:600 18px var(--font); cursor:pointer; transition:opacity var(--ease)}
 .controls button:hover{opacity:.7}
-.section-white .controls button{background:var(--band)}
+.band .controls button{background:var(--bg)}
 .count{font-size:14px; color:var(--caption); margin-left:8px; font-variant-numeric:tabular-nums}
 
 /* sharing knowledge */
@@ -213,6 +213,8 @@ footer a{color:var(--on-deep-2)}
   .path li:not(:last-child)::after{top:26px; left:6px; right:auto; bottom:-36px; border-top:0; border-left:2px dotted var(--caption)}
 }
 .hero{padding-block:clamp(56px, 8vw, 104px) clamp(48px, 6vw, 72px)}
+.metrics{padding-block:clamp(48px, 6vw, 72px)}
+.logos-section{padding-top:clamp(48px, 6vw, 72px)}
 .contact .email{font-size:17px; color:var(--on-deep-2); user-select:all}
 </style>
 </head>
@@ -265,6 +267,17 @@ footer a{color:var(--on-deep-2)}
   </div>
 </section>
 
+<section class="band metrics" id="numbers" aria-label="Results in numbers">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b>€150M</b><span>marketing budget managed across 11 markets</span></div>
+      <div class="stat"><b>+345%</b><span>paid-media conversion rate in one quarter</span></div>
+      <div class="stat"><b>€5M+</b><span>post-acquisition synergies</span></div>
+      <div class="stat"><b>+67%</b><span>eCommerce revenue, year on year</span></div>
+    </div>
+  </div>
+</section>
+
 <section class="logos-section" aria-label="Companies I've worked with">
   <div class="wrap">
     <p class="label">Companies I've worked with</p>
@@ -314,27 +327,15 @@ footer a{color:var(--on-deep-2)}
   </div>
 </section>
 
+
 <section id="results">
   <div class="wrap">
-    <div class="head"><p class="label">Results</p><h2>Numbers from the roles and engagements I've led.</h2></div>
-    <div class="stats">
-      <div class="stat"><b>€150M</b><span>marketing budget managed across 11 markets</span></div>
-      <div class="stat"><b>+345%</b><span>paid-media conversion rate in one quarter</span></div>
-      <div class="stat"><b>€5M+</b><span>post-acquisition synergies</span></div>
-      <div class="stat"><b>+67%</b><span>eCommerce revenue, year on year</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="band" id="cases">
-  <div class="wrap">
-    <div class="head"><p class="label">Cases</p><h2>Selected work.</h2></div>
+    <div class="head"><p class="label">Results</p><h2>Selected work.</h2></div>
     <div class="cases">
       <article class="case">
         <div class="case-meta">
           <span class="client">FTSE-listed trading platform</span>
           <span class="big">+345%</span><span class="big-l">paid-media conversion rate in one quarter</span>
-          <span class="scope">Interim marketing leadership · 6-month full-time engagement, 2025</span>
         </div>
         <div class="case-body">
           <h3>Turning around a multi-market marketing organization</h3>
@@ -379,7 +380,7 @@ footer a{color:var(--on-deep-2)}
   </div>
 </section>
 
-<section id="testimonials">
+<section class="band" id="testimonials">
   <div class="wrap">
     <div class="head"><p class="label">Testimonials</p><h2>What they say about me.</h2></div>
     <div class="slider">
@@ -434,7 +435,7 @@ footer a{color:var(--on-deep-2)}
   </div>
 </section>
 
-<section class="band" id="about">
+<section id="about">
   <div class="wrap about">
     <div class="head" style="margin:0"><p class="label">About</p><h2>Santiago Rodríguez de Miguel</h2></div>
     <div class="about-text">
@@ -447,11 +448,12 @@ footer a{color:var(--on-deep-2)}
   </div>
 </section>
 
-<section id="teaching">
+<section class="band" id="teaching">
   <div class="wrap">
-    <div class="head"><p class="label">Teaching · Speaking · Mentoring</p><h2>Sharing ideas. Putting them into practice.</h2><p class="lede">I bring practical perspectives on marketing leadership, AI and organizational transformation into the classroom, executive programmes and mentoring.</p></div>
-    <div class="about-text" style="margin-top:-24px">
-      <p>My teaching experience includes postgraduate modules in digital marketing and social commerce, undergraduate courses in PR and communication strategy, and in-company executive programmes. I also mentor marketers through the Comillas Alumni programme, and offer one-to-one mentoring for CMOs and senior marketers, especially in a new role or a tough transition.</p>
+    <div class="head"><p class="label">Teaching · Speaking · Mentoring</p><h2>Sharing ideas. Putting them into practice.</h2></div>
+    <div class="about-text">
+      <p>I bring practical perspectives on marketing leadership, AI and organizational transformation into the classroom, executive programmes and mentoring.</p>
+      <p>My teaching experience includes postgraduate modules in digital marketing and social commerce, undergraduate courses in PR and communication strategy, and in-company executive programmes. I also mentor students through the Comillas Alumni programme, and offer one-to-one mentoring for CMOs and senior marketers, especially in a new role or a transition.</p>
     </div>
     <div class="logo-row">
       <div class="logo-cell"><img class="xl" src="assets/logos/il3-ub.png" alt="IL3, Universitat de Barcelona"></div>
