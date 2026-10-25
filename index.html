@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Santi Rodríguez · Fractional CMO &amp; Executive Marketing Advisory | Sather Bridge</title>
+<title>Santiago Rodríguez de Miguel · Fractional CMO &amp; Executive Marketing Advisor | Sather Bridge</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="I transform marketing organizations for the AI era. Fractional CMO and advisory for B2B and B2C companies up to €500M in revenue. Barcelona / remote.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -159,6 +159,61 @@ nav .btn{font-size:14px; padding:7px 16px}
 footer{background:var(--deep); color:var(--on-deep-2); font-size:13px}
 footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; padding-block:24px 32px}
 footer a{color:var(--on-deep-2)}
+/* nav: mobile menu */
+.menu-toggle{display:none; width:40px; height:40px; border:0; background:transparent; color:var(--text); cursor:pointer; padding:0}
+.menu-toggle svg{display:block; margin:auto}
+.mobile-menu{display:none}
+@media (max-width:860px){
+  .menu-toggle{display:block}
+  nav .wrap{gap:12px}
+  nav .brand{flex:1}
+  .mobile-menu{display:grid; padding-block:8px 20px; padding-left:max(16px, env(safe-area-inset-left,0px)); padding-right:max(16px, env(safe-area-inset-right,0px))}
+  .mobile-menu[hidden]{display:none}
+  .mobile-menu a{color:var(--text); font-size:24px; font-weight:600; padding-block:10px; letter-spacing:-.01em}
+}
+.hero .creds{font-size:16px; color:var(--text-2); max-width:var(--measure); margin-top:16px}
+
+/* logo rows: one line; swipe on phones */
+.logo-row{display:flex; align-items:center; gap:clamp(24px, 3.5vw, 40px); overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; margin-top:28px; padding-bottom:4px}
+.logo-row::-webkit-scrollbar{display:none}
+.logo-cell{flex:1 0 auto; display:flex; align-items:center; height:56px; scroll-snap-align:start}
+.logo-cell img{height:24px; width:auto; max-width:130px; filter:grayscale(1) brightness(0); opacity:.45; transition:opacity var(--ease)}
+.logo-cell img.sq{height:30px} .logo-cell img.tall{height:34px} .logo-cell img.xl{height:46px; max-width:150px}
+.logo-cell img:hover{opacity:.75}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .logo-cell img{filter:grayscale(1) brightness(0) invert(1); opacity:.55} }
+:root[data-theme="dark"] .logo-cell img{filter:grayscale(1) brightness(0) invert(1); opacity:.55}
+@media (max-width:760px){
+  .logo-cell{flex:0 0 40%; justify-content:center}
+  .logo-row{-webkit-mask-image:linear-gradient(to right, #000 78%, transparent); mask-image:linear-gradient(to right, #000 78%, transparent)}
+}
+.logos-section{padding-block:0 clamp(56px, 7vw, 88px)}
+
+/* services and engagements: text columns, no boxes */
+.grid2{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:48px clamp(48px, 7vw, 96px)}
+.grid3{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:40px clamp(32px, 5vw, 64px)}
+.item{display:grid; gap:8px; align-content:start}
+.item p{color:var(--text-2); max-width:44ch}
+@media (max-width:760px){ .grid2,.grid3{grid-template-columns:1fr; gap:36px} }
+
+/* how I work: three dots joined by a dotted line, like a connect-the-dots drawing */
+.path{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:clamp(32px, 5vw, 64px); list-style:none; padding:0; margin:0}
+.path li{position:relative; padding-top:44px; display:grid; gap:10px; align-content:start}
+.path .dot{position:absolute; top:0; left:0; width:14px; height:14px; border-radius:50%; background:var(--text)}
+.path li:not(:last-child)::after{content:""; position:absolute; top:6px; left:26px; right:calc(-1 * clamp(32px, 5vw, 64px) + 12px); border-top:2px dotted var(--caption)}
+.path .n{font-size:14px; font-weight:600; color:var(--caption); font-variant-numeric:tabular-nums}
+.path h3{font-size:28px; font-weight:800; letter-spacing:-.025em}
+.path p{color:var(--text-2)}
+.path .outcome{margin-top:8px; display:grid; gap:2px}
+.path .outcome span{font-size:14px; font-weight:600; color:var(--caption)}
+.path .outcome b{font-weight:600; color:var(--text)}
+@media (max-width:760px){
+  .path{grid-template-columns:1fr; gap:40px}
+  .path li{padding-top:0; padding-left:40px}
+  .path .dot{top:4px}
+  .path li:not(:last-child)::after{top:26px; left:6px; right:auto; bottom:-36px; border-top:0; border-left:2px dotted var(--caption)}
+}
+.hero{padding-block:clamp(56px, 8vw, 104px) clamp(48px, 6vw, 72px)}
+.contact .email{font-size:17px; color:var(--on-deep-2); user-select:all}
 </style>
 </head>
 <body>
@@ -168,23 +223,28 @@ footer a{color:var(--on-deep-2)}
     <a class="brand" href="#top">Sather Bridge</a>
     <div class="menu">
       <a href="#results">Results</a>
-      <a href="#services">Services</a>
-      <a href="#how">How I work</a>
-      <a href="#cases">Cases</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="#sharing">Sharing</a>
       <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </div>
     <a class="btn" href="https://calendar.app.google/U7s472umsJnMCU3NA" target="_blank" rel="noopener">Book a call</a>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+      <svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true"><path d="M0 1h20M0 7h20M0 13h20" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <a href="#results">Results</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
   </div>
 </nav>
 
 <section class="hero" id="top">
   <div class="wrap hero-grid">
     <div>
-      <p class="label">Executive Marketing Advisory · Fractional CMO</p>
+      <p class="label">Executive Marketing Advisor · Fractional CMO</p>
       <h1>I transform marketing organizations for the AI era.</h1>
-      <p class="lede">20+ years leading marketing and growth at L'Oréal, Vodafone, Adevinta and scale-ups. I diagnose, redesign and rebuild marketing teams, operating models and go-to-market for B2B and B2C companies up to €500M in revenue.</p>
+      <p class="lede">I help B2B and B2C companies redesign marketing for an AI-first world: how teams are structured, how work gets done, how go-to-market decisions are made and where AI delivers measurable business value.</p>
+      <p class="creds">20+ years in marketing leadership at L’Oréal, Vodafone, Adevinta and high-growth businesses. Experience across brand, acquisition, retention, eCommerce and organizational transformation.</p>
       <div class="ctas">
         <a class="btn" href="https://calendar.app.google/U7s472umsJnMCU3NA" target="_blank" rel="noopener">Book a call</a>
         <a class="btn-link" href="#results">See results</a>
@@ -201,11 +261,60 @@ footer a{color:var(--on-deep-2)}
         </svg>
       </div>
     </div>
-    <figure class="photo"><img src="assets/img/santi-rodriguez.jpg" alt="Santi Rodríguez" width="800" height="1129"></figure>
+    <figure class="photo"><img src="assets/img/santi-rodriguez.jpg" alt="Santiago Rodríguez de Miguel" width="800" height="1129"></figure>
   </div>
 </section>
 
-<section class="band" id="results">
+<section class="logos-section" aria-label="Companies I've worked with">
+  <div class="wrap">
+    <p class="label">Companies I've worked with</p>
+    <div class="logo-row">
+      <div class="logo-cell"><img src="assets/logos/loreal.svg" alt="L'Oréal"></div>
+      <div class="logo-cell"><img class="sq" src="assets/logos/vodafone.svg" alt="Vodafone"></div>
+      <div class="logo-cell"><img src="assets/logos/privalia.png" alt="Privalia"></div>
+      <div class="logo-cell"><img src="assets/logos/adevinta.svg" alt="Adevinta"></div>
+      <div class="logo-cell"><img src="assets/logos/schibsted.svg" alt="Schibsted"></div>
+      <div class="logo-cell"><img src="assets/logos/milbby.png" alt="Milbby"></div>
+      <div class="logo-cell"><img src="assets/logos/salesforce.svg" alt="Salesforce"></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="services">
+  <div class="wrap">
+    <div class="head"><p class="label">Services</p><h2>What I can help you change.</h2></div>
+    <div class="grid2">
+      <div class="item"><h3>Marketing operating model</h3><p>Redesign structure, roles, workflows, capabilities and decision-making for an AI-first organization.</p></div>
+      <div class="item"><h3>Go-to-market</h3><p>Clarify target segments, positioning, value propositions and commercial priorities.</p></div>
+      <div class="item"><h3>Team and leadership</h3><p>Align teams, accountability, skills and leadership around business outcomes.</p></div>
+      <div class="item"><h3>AI-first execution</h3><p>Identify where AI, automation and redesigned processes can improve marketing productivity and performance.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="head"><p class="label">How I work</p><h2>From diagnosis to measurable change.</h2><p class="lede">I work across three stages to identify where marketing needs to change, design a better operating model and turn it into measurable business impact.</p></div>
+    <ol class="path">
+      <li><span class="dot" aria-hidden="true"></span><span class="n">01</span><h3>Discover</h3><p>Understand the business, assess the marketing organization and identify the highest-impact opportunities for improvement and AI adoption.</p><div class="outcome"><span>Outcome</span><b>A clear diagnosis and priorities.</b></div></li>
+      <li><span class="dot" aria-hidden="true"></span><span class="n">02</span><h3>Design</h3><p>Redesign the operating model, go-to-market approach, team capabilities and workflows to make marketing more effective and AI-first.</p><div class="outcome"><span>Outcome</span><b>A practical transformation roadmap.</b></div></li>
+      <li><span class="dot" aria-hidden="true"></span><span class="n">03</span><h3>Scale</h3><p>Put the new model into practice, test new ways of working, build team capabilities and scale what delivers measurable results.</p><div class="outcome"><span>Outcome</span><b>Adoption, learning and business impact.</b></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band" id="engagements">
+  <div class="wrap">
+    <div class="head"><p class="label">Engagements</p><h2>The level of support you need.</h2></div>
+    <div class="grid3">
+      <div class="item"><h3>Transformation engagement</h3><p>Diagnose the current organization, redesign the operating model and establish a practical implementation roadmap.</p></div>
+      <div class="item"><h3>Fractional CMO</h3><p>Provide senior marketing leadership, direction and hands-on execution without a full-time appointment.</p></div>
+      <div class="item"><h3>Scoped advisory</h3><p>Tackle a defined challenge in marketing organization, GTM or AI adoption.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="results">
   <div class="wrap">
     <div class="head"><p class="label">Results</p><h2>Numbers from the roles and engagements I've led.</h2></div>
     <div class="stats">
@@ -213,51 +322,6 @@ footer a{color:var(--on-deep-2)}
       <div class="stat"><b>+345%</b><span>paid-media conversion rate in one quarter</span></div>
       <div class="stat"><b>€5M+</b><span>post-acquisition synergies</span></div>
       <div class="stat"><b>+67%</b><span>eCommerce revenue, year on year</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="logos-section">
-  <div class="wrap">
-    <p class="label">Companies I've worked with</p>
-    <div class="logos">
-      <img src="assets/logos/loreal.svg" alt="L'Oréal">
-      <img class="sq" src="assets/logos/vodafone.svg" alt="Vodafone">
-      <img src="assets/logos/privalia.png" alt="Privalia">
-      <img src="assets/logos/adevinta.svg" alt="Adevinta">
-      <img src="assets/logos/schibsted.svg" alt="Schibsted">
-      <img src="assets/logos/milbby.png" alt="Milbby">
-      <img src="assets/logos/salesforce.svg" alt="Salesforce">
-    </div>
-  </div>
-</section>
-
-<section class="band" id="services">
-  <div class="wrap">
-    <div class="head"><p class="label">Services</p><h2>How I can help.</h2><p class="lede">360º or scoped engagements, from diagnosis to hands-on leadership.</p></div>
-    <div class="svc">
-      <div class="svc-col">
-        <p class="label">For companies</p>
-        <div class="svc-item"><h3>Fractional CMO</h3><p>Senior marketing leadership a few days a week. I set direction, run the team and own the results with you.</p></div>
-        <div class="svc-item"><h3>Marketing audit &amp; redesign</h3><p>A 360º review of structure, channels, spend, team and tools. You get a clear diagnosis and a plan to rebuild the function to be AI first.</p></div>
-        <div class="svc-item"><h3>Go-to-market</h3><p>Segmentation, positioning and value proposition per segment, plus a way to prioritise GTM initiatives. For launches, new markets and pivots.</p></div>
-      </div>
-      <div class="svc-col">
-        <p class="label">For leaders</p>
-        <div class="svc-item"><h3>Mentoring for marketing leaders</h3><p>One-to-one support for CMOs and senior marketers, especially in a new role or a tough transition. I share what I've learned running marketing teams, budgets and turnarounds.</p></div>
-        <div class="svc-item"><h3>Training &amp; workshops</h3><p>Working sessions for leadership and marketing teams on positioning, growth strategy and team alignment.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="how">
-  <div class="wrap">
-    <div class="head"><p class="label">How I work</p><h2>Discover. Design. Scale.</h2><p class="lede">I bridge the gap between strategy and execution: I design the plan and help you run it.</p></div>
-    <div class="steps">
-      <div class="step"><span class="n">1</span><h3>Discover</h3><p>Understand your customers, business model and growth levers. Find the gaps, friction points and missed opportunities.</p></div>
-      <div class="step"><span class="n">2</span><h3>Design</h3><p>Build the system: operating model, team, playbooks and the growth loops that make results repeat.</p></div>
-      <div class="step"><span class="n">3</span><h3>Scale</h3><p>Turn the plan into action: go-to-market, acquisition and retention roadmaps, rebrands. Then measure, fix and repeat.</p></div>
     </div>
   </div>
 </section>
@@ -370,29 +434,33 @@ footer a{color:var(--on-deep-2)}
   </div>
 </section>
 
-<section class="band sharing" id="sharing">
-  <div class="wrap">
-    <div class="head"><p class="label">Sharing knowledge</p><h2>Where I share what I've learned.</h2><p class="lede">Postgraduate modules in digital marketing and social commerce, undergraduate courses in PR and communication strategy, and in-company executive programmes. I also mentor marketers through the Comillas Alumni programme.</p></div>
-    <div class="logos">
-      <img class="xl" src="assets/logos/il3-ub.png" alt="IL3, Universitat de Barcelona">
-      <img class="tall" src="assets/logos/icemd-esic.svg" alt="ICEMD by ESIC">
-      <img src="assets/logos/uva.svg" alt="Universidad de Valladolid">
-      <img class="xl" src="assets/logos/upc.svg" alt="UPC, Universitat Politècnica de Catalunya">
-      <img class="sq" src="assets/logos/telefonica.svg" alt="Telefónica">
-      <img class="tall" src="assets/logos/comillas.svg" alt="Universidad Pontificia Comillas">
-      <img class="tall" src="assets/logos/founderz.svg" alt="Founderz">
+<section class="band" id="about">
+  <div class="wrap about">
+    <div class="head" style="margin:0"><p class="label">About</p><h2>Santiago Rodríguez de Miguel</h2></div>
+    <div class="about-text">
+      <p>As a kid, I loved connect-the-dots drawings. Much like in work and life, a more interesting picture emerges when you bring disciplines, people and cultures together.</p>
+      <p>I’ve spent more than 20 years leading marketing and growth in global corporations and fast-growing businesses, helping them adapt to change and find new ways to grow.</p>
+      <p>At Adevinta, one of the world’s largest online classifieds groups, I spent eight years as Director of Growth and Head of Marketing. I led a team of 15 across 11 markets in Europe and Latin America, integrated eBay Classifieds marketing teams and served as interim CMO in Italy during its shift to a transactional model.</p>
+      <p>Earlier in my career, I worked in brand and acquisition at L’Oréal (Lancôme), Privalia and Vodafone. At Tansley (Milbby), I rebuilt the eCommerce channel. Since 2024, I’ve worked as an Executive Marketing Advisor and Fractional CMO, helping companies rethink marketing for the AI era. I also co-founded an AI-native investor education platform.</p>
+      <p>I studied Law and Business Administration at ICADE (Comillas Pontifical University) and completed my MBA at UC Berkeley’s Haas School of Business.</p>
     </div>
   </div>
 </section>
 
-<section id="about">
-  <div class="wrap about">
-    <div class="head" style="margin:0"><p class="label">About</p><h2>Santi Rodríguez</h2></div>
-    <div class="about-text">
-      <p>Born in Spain, with roots in Madrid, Segovia and Barcelona. I've also lived in New Delhi and Berkeley.</p>
-      <p>As a kid I loved connect-the-dots drawings: the picture only appears once you join the numbers in order. Work feels the same to me. The interesting part happens where disciplines, people and cultures meet.</p>
-      <p>For 20+ years I've led marketing and growth at global corporations (L'Oréal, Vodafone, Adevinta) and fast-moving startups, across brand, acquisition, retention and product marketing. I do my best work linking strategy and execution, usually when something is broken or in transition.</p>
-      <p>Law and Business (ICADE), MBA from UC Berkeley.</p>
+<section id="teaching">
+  <div class="wrap">
+    <div class="head"><p class="label">Teaching · Speaking · Mentoring</p><h2>Sharing ideas. Putting them into practice.</h2><p class="lede">I bring practical perspectives on marketing leadership, AI and organizational transformation into the classroom, executive programmes and mentoring.</p></div>
+    <div class="about-text" style="margin-top:-24px">
+      <p>My teaching experience includes postgraduate modules in digital marketing and social commerce, undergraduate courses in PR and communication strategy, and in-company executive programmes. I also mentor marketers through the Comillas Alumni programme, and offer one-to-one mentoring for CMOs and senior marketers, especially in a new role or a tough transition.</p>
+    </div>
+    <div class="logo-row">
+      <div class="logo-cell"><img class="xl" src="assets/logos/il3-ub.png" alt="IL3, Universitat de Barcelona"></div>
+      <div class="logo-cell"><img class="tall" src="assets/logos/icemd-esic.svg" alt="ICEMD by ESIC"></div>
+      <div class="logo-cell"><img src="assets/logos/uva.svg" alt="Universidad de Valladolid"></div>
+      <div class="logo-cell"><img class="xl" src="assets/logos/upc.svg" alt="UPC, Universitat Politècnica de Catalunya"></div>
+      <div class="logo-cell"><img class="sq" src="assets/logos/telefonica.svg" alt="Telefónica"></div>
+      <div class="logo-cell"><img class="tall" src="assets/logos/comillas.svg" alt="Universidad Pontificia Comillas"></div>
+      <div class="logo-cell"><img class="tall" src="assets/logos/founderz.svg" alt="Founderz"></div>
     </div>
   </div>
 </section>
@@ -402,17 +470,22 @@ footer a{color:var(--on-deep-2)}
     <h2>Let's talk.</h2>
     <p>Tell me where things stand and let's connect the dots together.</p>
     <a class="btn" href="https://calendar.app.google/U7s472umsJnMCU3NA" target="_blank" rel="noopener">Book a call</a>
+    <span class="email">santiago.rdm@gmail.com</span>
   </div>
 </section>
 <footer>
   <div class="wrap">
-    <span>© 2026 Sather Bridge Capital, S.L.</span>
+    <span>© 2026 Sather Bridge Capital, S.L. · Santiago Rodríguez de Miguel</span>
     <span><a href="https://www.linkedin.com/in/santiagorodriguezdemiguel" target="_blank" rel="noopener">LinkedIn</a> · <a href="legal.html">Legal notice &amp; privacy</a></span>
   </div>
 </footer>
 
 <script>
 (function(){
+  var b=document.getElementById('menu-toggle'), m=document.getElementById('mobile-menu');
+  function set(o){ m.hidden=!o; b.setAttribute('aria-expanded', o?'true':'false'); b.setAttribute('aria-label', o?'Close menu':'Open menu'); }
+  b.onclick=function(){ set(m.hidden); };
+  m.addEventListener('click',function(e){ if(e.target.tagName==='A') set(false); });
   var t=document.getElementById('track'), n=t.children.length, c=document.getElementById('count');
   function idx(){return Math.round(t.scrollLeft/t.clientWidth);}
   function upd(){c.textContent=(idx()+1)+' / '+n;}
