@@ -9,9 +9,9 @@ Premium, human-crafted, Apple-inspired. The page must not look like a generic AI
 1. **Typography first.** One sans-serif family only: Inter (Google Fonts). Never a serif. Strong weight contrast: 800 for headings, 600 for subheadings, 400 for copy. Line height 1.5–1.6.
 2. **Anti-AI rule.** No generic dashboard grids, no small colorful boxes holding icons, no border-heavy containers or cards. Separate ideas with generous white space and alternating section backgrounds, not lines.
 3. **Palette.** Strictly limited.
-   - Light: background #FFFFFF, alternate band #F5F5F7, text #1D1D1F, secondary text #6E6E73, captions/logos #86868B.
+   - Light: background #FFFFFF, alternate band #FAFAF7 (warm off-white from the slide template), text #1D1D1F, secondary text #6E6E73, captions/logos #86868B.
    - Dark: background #000000, alternate band #1D1D1F, text #F5F5F7, secondary text #A1A1A6.
-   - Accent: #1F4E79 (light) / #8DB4DC (dark), the navy from Santi's CV template. Use only for critical interaction (buttons, links).
+   - Accent: #1C786F (light, contrast 5.3:1 on white) / #4FB3A6 (dark, 8.3:1 on black), the green from Santi's slide template. Use only for critical interaction (buttons, links).
    - Body text must meet WCAG AA contrast; #86868B on white does not, so it is for captions and logos only.
 4. **Micro-interactions.** Smooth, subtle transitions (ease-in-out, 300ms) on hover. No aggressive color flashes.
 
