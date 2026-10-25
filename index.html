@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="I transform marketing organizations for the AI era. Fractional CMO and advisory for B2B and B2C companies up to €500M in revenue. Barcelona / remote.">
+<title>Santi Rodríguez · Fractional CMO &amp; Executive Marketing Advisory | Sather Bridge</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single scroll, sticky anchor nav, a thin "bridge" arch linking strategy and execution as the one signature motif */
+:root{
+  --bg:#F5F7F7; --surface:#FFFFFF; --ink:#1C2A30; --muted:#5B6B71; --line:#D9E1E2;
+  --accent:#1F4E79; --accent-soft:#E3EAF2; --band:#1C2A30; --band-fg:#EEF3F3; --band-muted:#A9BBBE; --ph:#FFF4D6; --ph-fg:#7A5A00;
+  --f-display:"DM Serif Display", Georgia, "Times New Roman", serif;
+  --f-body:"Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#11191C; --surface:#172226; --ink:#E6EEEF; --muted:#9AAEB2; --line:#2A3A3F;
+  --accent:#8DB4DC; --accent-soft:#1B2A3A; --band:#0B1214; --band-fg:#E6EEEF; --band-muted:#8FA4A8; --ph:#3A3018; --ph-fg:#F2D27A; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#11191C; --surface:#172226; --ink:#E6EEEF; --muted:#9AAEB2; --line:#2A3A3F;
+  --accent:#8DB4DC; --accent-soft:#1B2A3A; --band:#0B1214; --band-fg:#E6EEEF; --band-muted:#8FA4A8; --ph:#3A3018; --ph-fg:#F2D27A; color-scheme:dark }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:72px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--bg); color:var(--ink); font:16px/1.6 var(--f-body)}
+body::before{content:""; position:fixed; inset:0 0 auto; height:env(safe-area-inset-top,0px); z-index:10; background:var(--bg)}
+a{color:var(--accent)}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--accent); outline-offset:3px}
+.wrap{max-width:1080px; margin:0 auto; padding-left:max(16px, env(safe-area-inset-left,0px)); padding-right:max(16px, env(safe-area-inset-right,0px))}
+section{padding-block:72px; border-top:1px solid var(--line)}
+h1,h2,h3{text-wrap:balance; margin:0}
+h2{font:400 clamp(30px,4vw,42px)/1.15 var(--f-display); letter-spacing:-.01em}
+h3{font:600 18px/1.35 var(--f-body)}
+p{margin:0}
+.eyebrow{font:500 12px/1 var(--f-mono); letter-spacing:.12em; text-transform:uppercase; color:var(--accent)}
+.lede{color:var(--muted); max-width:62ch}
+.head{display:grid; gap:12px; margin-bottom:40px}
+.ph{background:var(--ph); color:var(--ph-fg); border-radius:3px; padding:0 4px; font-family:var(--f-mono); font-size:.85em}
+
+/* draft ribbon */
+.draft{background:var(--ph); color:var(--ph-fg); font:500 12px/1.4 var(--f-mono); text-align:center; padding-block:8px}
+
+/* nav */
+nav{position:sticky; top:env(safe-area-inset-top,0px); z-index:5; background:color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter:blur(8px); border-bottom:1px solid var(--line)}
+nav .wrap{display:flex; align-items:center; gap:24px; height:60px}
+.brand{font:400 22px/1 var(--f-display); color:var(--ink); text-decoration:none; white-space:nowrap}
+.menu{display:flex; gap:20px; overflow-x:auto; scrollbar-width:none; flex:1; min-width:0}
+.menu a{color:var(--muted); text-decoration:none; font-size:14px; white-space:nowrap}
+.menu a:hover{color:var(--ink)}
+.btn{display:inline-flex; align-items:center; gap:8px; background:var(--accent); color:var(--bg); text-decoration:none; font-weight:600; font-size:15px; padding:12px 20px; border-radius:4px; white-space:nowrap}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent; color:var(--ink); border:1px solid var(--line)}
+nav .btn{padding:8px 14px; font-size:14px}
+@media (max-width:720px){ .menu{display:none} nav .wrap{justify-content:space-between} }
+
+/* hero */
+.hero{border-top:0; padding-block:64px 56px}
+.hero-grid{display:grid; grid-template-columns:1.4fr 1fr; gap:48px; align-items:center}
+.hero h1{font:400 clamp(38px,6vw,64px)/1.05 var(--f-display); letter-spacing:-.015em; margin-block:16px 20px}
+.hero .lede{font-size:18px}
+.ctas{display:flex; gap:12px; flex-wrap:wrap; margin-top:28px}
+.photo{aspect-ratio:4/5; max-width:100%; background:var(--accent-soft); border-radius:4px; overflow:hidden}
+.photo img{width:100%; height:100%; object-fit:cover; object-position:50% 20%; display:block}
+.bridge{margin-top:36px; max-width:520px}
+.bridge svg{width:100%; height:auto; display:block}
+.bridge text{font:500 11px var(--f-mono); letter-spacing:.12em; fill:var(--muted)}
+@media (max-width:820px){ .hero-grid{grid-template-columns:1fr} .photo{max-width:360px} }
+
+/* stats */
+.stats{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line)}
+.stat{background:var(--surface); padding:28px 24px; display:grid; gap:8px; align-content:start}
+.stat b{font:400 clamp(34px,4vw,46px)/1 var(--f-display); color:var(--accent); font-variant-numeric:tabular-nums}
+.stat span{color:var(--muted); font-size:14px}
+@media (max-width:820px){ .stats{grid-template-columns:repeat(2,1fr)} }
+
+/* logos */
+.logos{display:flex; flex-wrap:wrap; gap:12px 36px; align-items:center}
+.logos span{font:600 17px var(--f-body); color:var(--muted); letter-spacing:.02em; opacity:.85}
+.logos img{height:26px; width:auto; max-width:150px; filter:grayscale(1) brightness(0); opacity:.5; transition:opacity .3s ease-in-out}
+.logos img.sq{height:32px}
+.logos img.tall{height:36px}
+.logos img.xl{height:48px; max-width:170px}
+.logos img:hover{opacity:.8}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .logos img{filter:grayscale(1) brightness(0) invert(1); opacity:.6} }
+:root[data-theme="dark"] .logos img{filter:grayscale(1) brightness(0) invert(1); opacity:.6}
+
+/* services */
+.svc-groups{display:grid; grid-template-columns:3fr 2fr; gap:32px}
+.group-label{font:500 12px var(--f-mono); letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:14px}
+.cards{display:grid; gap:12px}
+.card{background:var(--surface); border:1px solid var(--line); border-radius:4px; padding:22px; display:grid; gap:8px}
+.card p{color:var(--muted); font-size:15px}
+.unis{margin-top:14px; font:500 12px/1.6 var(--f-mono); color:var(--muted)}
+@media (max-width:820px){ .svc-groups{grid-template-columns:1fr} }
+
+/* method */
+.steps{display:grid; grid-template-columns:repeat(3,1fr); gap:32px; counter-reset:s}
+.step{display:grid; gap:10px; border-top:2px solid var(--accent); padding-top:18px}
+.step .n{font:500 12px var(--f-mono); color:var(--accent); letter-spacing:.1em}
+.step h3{font:400 26px/1.1 var(--f-display)}
+.step p{color:var(--muted); font-size:15px}
+@media (max-width:820px){ .steps{grid-template-columns:1fr} }
+
+/* cases */
+.cases{display:grid; gap:20px}
+.case{display:grid; grid-template-columns:220px 1fr; gap:32px; background:var(--surface); border:1px solid var(--line); border-radius:4px; padding:28px}
+.case-meta{display:grid; gap:10px; align-content:start}
+.case-meta .client{font:500 12px/1.4 var(--f-mono); letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+.case-meta .big{font:400 40px/1 var(--f-display); color:var(--accent); font-variant-numeric:tabular-nums}
+.case-meta .big-l{font-size:13px; color:var(--muted)}
+.case-body{display:grid; gap:14px; min-width:0}
+.case-body h3{font:400 26px/1.15 var(--f-display)}
+.case-body .k{font:500 11px var(--f-mono); letter-spacing:.12em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:4px}
+.case-body p,.case-body li{color:var(--muted); font-size:15px}
+.case-body ul{margin:0; padding-left:18px; display:grid; gap:4px}
+.case-body li b{color:var(--ink); font-weight:600}
+@media (max-width:820px){ .case{grid-template-columns:1fr; gap:16px; padding:22px} }
+
+/* testimonials */
+.quotes{display:grid; grid-template-columns:repeat(2,1fr); gap:20px}
+.quote{border-left:2px solid var(--accent); padding:4px 0 4px 22px; display:grid; gap:14px}
+.quote p{font:400 19px/1.5 var(--f-display)}
+.quote cite{font-style:normal; font-size:14px; color:var(--muted)}
+.quote cite b{color:var(--ink); font-weight:600}
+@media (max-width:820px){ .quotes{grid-template-columns:1fr} }
+
+/* slider */
+.slider{display:grid; gap:20px}
+.track{display:grid; grid-auto-flow:column; grid-auto-columns:100%; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; scroll-behavior:smooth}
+.track::-webkit-scrollbar{display:none}
+.slide{scroll-snap-align:start; margin:0; padding:4px 2px 4px 24px; border-left:2px solid var(--accent); display:grid; gap:16px; align-content:start; min-width:0}
+.slide p{font:400 clamp(17px,2vw,20px)/1.55 var(--f-display); max-width:68ch}
+.slide cite{font-style:normal; font-size:14px; color:var(--muted)}
+.slide cite b{color:var(--ink); font-weight:600}
+.controls{display:flex; align-items:center; gap:16px}
+.controls button{background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:4px; width:40px; height:40px; font-size:18px; cursor:pointer}
+.controls button:hover{border-color:var(--accent)}
+.controls button:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+.dots{display:flex; gap:8px}
+.dots span{width:8px; height:8px; border-radius:50%; background:var(--line)}
+.dots span.on{background:var(--accent)}
+.count{font:500 12px var(--f-mono); color:var(--muted); letter-spacing:.08em}
+
+/* about */
+.about{display:grid; grid-template-columns:1fr 1.6fr; gap:48px; align-items:start}
+.about-text{display:grid; gap:16px; max-width:64ch}
+.about-text p{color:var(--muted)}
+.about-text p:first-child{color:var(--ink); font-size:18px}
+@media (max-width:820px){ .about{grid-template-columns:1fr} }
+
+/* contact band */
+.contact{background:var(--band); color:var(--band-fg); border-top:0}
+.contact h2{color:var(--band-fg)}
+.contact p{color:var(--band-muted); max-width:56ch}
+.contact .inner{display:grid; gap:20px; justify-items:start}
+.contact .btn{background:var(--band-fg); color:var(--band)}
+footer{background:var(--band); color:var(--band-muted); font-size:13px; border-top:1px solid color-mix(in srgb, var(--band-muted) 25%, transparent)}
+footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; padding-block:24px}
+footer a{color:var(--band-muted)}
+</style>
+</head>
+<body>
+
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Sather Bridge</a>
+    <div class="menu">
+      <a href="#results">Results</a>
+      <a href="#services">Services</a>
+      <a href="#how">How I work</a>
+      <a href="#cases">Cases</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#sharing">Sharing</a>
+      <a href="#about">About</a>
+    </div>
+    <a class="btn" href="https://calendar.app.google/U7s472umsJnMCU3NA" target="_blank" rel="noopener">Book a call</a>
+  </div>
+</nav>
+
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Executive Marketing Advisory · Fractional CMO</span>
+      <h1>I transform marketing organizations for the AI era.</h1>
+      <p class="lede">20+ years leading marketing and growth at L'Oréal, Vodafone, Adevinta and scale-ups. I diagnose, redesign and rebuild marketing teams, operating models and go-to-market for B2B and B2C companies up to €500M in revenue.</p>
+      <div class="ctas">
+        <a class="btn" href="https://calendar.app.google/U7s472umsJnMCU3NA" target="_blank" rel="noopener">Book a call</a>
+        <a class="btn ghost" href="#results">See results</a>
+      </div>
+      <div class="bridge" aria-hidden="true">
+        <svg viewBox="0 0 520 70">
+          <path d="M20 52 Q260 -18 500 52" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <line x1="20" y1="52" x2="500" y2="52" stroke="var(--line)" stroke-width="1"/>
+          <g stroke="var(--accent)" stroke-width="1" opacity=".45">
+            <line x1="100" y1="52" x2="100" y2="31"/><line x1="180" y1="52" x2="180" y2="20"/><line x1="260" y1="52" x2="260" y2="17"/><line x1="340" y1="52" x2="340" y2="20"/><line x1="420" y1="52" x2="420" y2="31"/>
+          </g>
+          <circle cx="20" cy="52" r="4" fill="var(--accent)"/><circle cx="500" cy="52" r="4" fill="var(--accent)"/>
+          <text x="20" y="68">STRATEGY</text><text x="500" y="68" text-anchor="end">EXECUTION</text>
+        </svg>
+      </div>
+    </div>
+    <div class="photo"><img src="assets/img/santi-rodriguez.jpg" alt="Santi Rodríguez" width="800" height="1129"></div>
+  </div>
+</section>
+
+<section id="results">
+  <div class="wrap">
+    <div class="head"><span class="eyebrow">Results</span><h2>Numbers from the roles and engagements I've led</h2></div>
+    <div class="stats">
+      <div class="stat"><b>€150M</b><span>marketing budget managed across 11 markets</span></div>
+      <div class="stat"><b>+345%</b><span>paid-media conversion rate in one quarter</span></div>
+      <div class="stat"><b>€5M+</b><span>post-acquisition synergies</span></div>
+      <div class="stat"><b>+67%</b><span>eCommerce revenue, year on year</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head" style="margin-bottom:24px"><span class="eyebrow">Companies I've worked with</span></div>
+    <div class="logos">
+      <img class="" src="assets/logos/loreal.svg" alt="L'Oréal"><img class="sq" src="assets/logos/vodafone.svg" alt="Vodafone"><img class="" src="assets/logos/privalia.png" alt="Privalia"><img class="" src="assets/logos/adevinta.svg" alt="Adevinta"><img class="" src="assets/logos/schibsted.svg" alt="Schibsted"><img class="" src="assets/logos/milbby.png" alt="Milbby"><img class="" src="assets/logos/salesforce.svg" alt="Salesforce">
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head"><span class="eyebrow">Services</span><h2>How I can help</h2><p class="lede">360º or scoped engagements, from diagnosis to hands-on leadership.</p></div>
+    <div class="svc-groups">
+      <div>
+        <div class="group-label">For companies</div>
+        <div class="cards">
+          <div class="card"><h3>Fractional CMO</h3><p>Senior marketing leadership a few days a week. I set direction, run the team and own the results with you.</p></div>
+          <div class="card"><h3>Marketing audit &amp; redesign</h3><p>A 360º review of structure, channels, spend, team and tools. You get a clear diagnosis and a plan to rebuild the function to be AI first.</p></div>
+          <div class="card"><h3>Go-to-market</h3><p>Segmentation, positioning and value proposition per segment, plus a way to prioritise GTM initiatives. For launches, new markets and pivots.</p></div>
+        </div>
+      </div>
+      <div>
+        <div class="group-label">For leaders</div>
+        <div class="cards">
+          <div class="card"><h3>Mentoring for marketing leaders</h3><p>One-to-one support for CMOs and senior marketers, especially in a new role or a tough transition. I share what I've learned running marketing teams, budgets and turnarounds.</p></div>
+          <div class="card"><h3>Training &amp; workshops</h3><p>Working sessions for leadership and marketing teams on positioning, growth strategy and team alignment.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="head"><span class="eyebrow">How I work</span><h2>Discover. Design. Scale.</h2><p class="lede">I bridge the gap between strategy and execution: I design the plan and help you run it.</p></div>
+    <div class="steps">
+      <div class="step"><span class="n">STEP 1</span><h3>Discover</h3><p>Understand your customers, business model and growth levers. Find the gaps, friction points and missed opportunities.</p></div>
+      <div class="step"><span class="n">STEP 2</span><h3>Design</h3><p>Build the system: operating model, team, playbooks and the growth loops that make results repeat.</p></div>
+      <div class="step"><span class="n">STEP 3</span><h3>Scale</h3><p>Turn the plan into action: go-to-market, acquisition and retention roadmaps, rebrands. Then measure, fix and repeat.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="cases">
+  <div class="wrap">
+    <div class="head"><span class="eyebrow">Cases</span><h2>Selected work</h2></div>
+    <div class="cases">
+      <article class="case">
+        <div class="case-meta"><span class="client">FTSE-listed trading platform</span><span class="big">+345%</span><span class="big-l">paid-media conversion rate in one quarter</span><span class="big-l">Interim marketing leadership · 6-month full-time engagement, 2025</span></div>
+        <div class="case-body">
+          <h3>Turning around a multi-market marketing organization</h3>
+          <div><span class="k">Context</span><p>Marketing had the people and the budget to grow faster. The missing pieces were shared goals tied to business impact and clear ownership of regional budgets.</p></div>
+          <div><span class="k">What I did</span><ul>
+            <li><b>Org design:</b> restructured the marketing leadership and the team in the first two weeks.</li>
+            <li><b>Providers:</b> cancelled underperforming agency and supplier contracts.</li>
+            <li><b>Ways of working:</b> two OKRs replacing task-based goals, plus impact KPIs.</li>
+            <li><b>Measurement:</b> a measurement framework built from scratch.</li>
+            <li><b>Budget:</b> the first regional budget built on unit economics.</li></ul></div>
+          <div><span class="k">Results</span><p>Paid-media conversion rate +345% in one quarter. Vendor costs down 15%+ year on year. A simpler structure, clear accountability and a handover package the team now owns. Team survey at handover: 4.4/5 (8 responses).</p></div>
+        </div>
+      </article>
+      <article class="case">
+        <div class="case-meta"><span class="client">Adevinta</span><span class="big">12+</span><span class="big-l">marketplace brands on one positioning playbook</span></div>
+        <div class="case-body">
+          <h3>Marketing excellence across 11 markets</h3>
+          <div><span class="k">Context</span><p>One of the world's largest online classifieds groups. Local marketing teams worked at different maturity levels, and the central team had no line authority over them. After the eBay Classifieds acquisition, two marketing teams had to merge.</p></div>
+          <div><span class="k">What I did</span><ul>
+            <li>Built a center of excellence: capability assessments, playbooks (positioning, SEO, CRM), training and a community of 50+ marketers.</li>
+            <li>Launched the new Adevinta corporate brand in under 3 months, ahead of the IPO.</li>
+            <li>Merged the two teams and brought performance marketing in-house.</li></ul></div>
+          <div><span class="k">Results</span><p>Internal satisfaction above 4.5/5. SEO coverage from under half of the marketplaces to 100% in 12 months. +10% conversion from the CRM playbook. €5M+ in synergies.</p></div>
+        </div>
+      </article>
+      <article class="case">
+        <div class="case-meta"><span class="client">Spanish energy-tech scale-up</span><span class="big">B2B</span><span class="big-l">ABM built from scratch</span></div>
+        <div class="case-body">
+          <h3>Building ABM and go-to-market from scratch</h3>
+          <div><span class="k">Context</span><p>A growth-stage B2B company with no ABM capability. Sales and marketing measured activity, not outcomes.</p></div>
+          <div><span class="k">What I did</span><p>Audited marketing and growth practices. Redesigned segmentation, targeting and the value proposition per segment. Built ABM and sales alignment, plus a framework to prioritize GTM initiatives.</p></div>
+          <div><span class="k">Results</span><p>A clear map of segments with a value proposition for each, an ABM motion that sales and marketing run together, and a shared way to decide which GTM initiatives go first.</p></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="wrap">
+    <div class="head"><span class="eyebrow">Testimonials</span><h2>What they say about me</h2></div>
+    <div class="slider">
+      <div class="track" id="track" tabindex="0" aria-label="Testimonials">
+        <blockquote class="slide">
+          <p>“[…] The clarity achieved has been invaluable. The pace was remarkable: fast, decisive, and with visible impact. […] All the hard work of dismantling, assessing, and rebuilding has been done, and done exceptionally well.”</p>
+          <cite><b>Office Head</b> · FTSE-listed trading platform</cite>
+        </blockquote>
+        <blockquote class="slide">
+          <p>“Santiago stands out for his strategic thinking, quickly and rigorously analyzing complex situations, synthesizing key insights, and translating them into clear business recommendations. He stays ahead of market trends and deeply understands user and customer needs. He connects these insights to organizational practices, identifying gaps and areas for improvement. His foresight and recommendations help build organizational capabilities with the potential for global impact.”</p>
+          <cite><b>César Fernández</b> · Executive Coach</cite>
+        </blockquote>
+        <blockquote class="slide">
+          <p>“[…] Highly experienced and deeply knowledgeable in marketing, and it shows in everything they do. They combine strategic insight with strong management skills, aligning teams under one clear direction. Communication, clarity, and honesty stand out as their core strengths when working with teams and stakeholders.”</p>
+          <cite><b>Marketing team</b> · FTSE-listed trading platform</cite>
+        </blockquote>
+        <blockquote class="slide">
+          <p>“Thank you for taking the time to truly listen: to understand the company’s situation, identify our blockers, and help us see clearly what we needed to improve. Your ability to grasp both the context and the people made a real difference.”</p>
+          <cite><b>Marketing team member</b> · FTSE-listed trading platform</cite>
+        </blockquote>
+        <blockquote class="slide">
+          <p>“Santiago is a unique blend of strategist, designer and marketing professional, bringing, from his entrepreneurial past, valuable experiences in technology, design and consumer behavior. […] He has impressive communication skills, is a great team player and, in particular, does a great job at facilitating brainstorming sessions: usability studies, product design and similar efforts.”</p>
+          <cite><b>Pedro Vasconcellos</b> · Vice President Ventures and Innovation, Pearson</cite>
+        </blockquote>
+        <blockquote class="slide">
+          <p>“I enjoyed the way of working, the organization and the methodology to guide the workshops.”</p>
+          <cite><b>CEO</b> · Energy-tech scale-up</cite>
+        </blockquote>
+        <blockquote class="slide">
+          <p>“[…] Even in limited interactions, their combination of strategic thinking, delivery focus, and understanding of both technical and human dynamics drove meaningful organizational impact. They bring professionalism, collaboration, and clarity in a way that makes a lasting difference.”</p>
+          <cite><b>Marketing</b> · FTSE-listed trading platform</cite>
+        </blockquote>
+        <blockquote class="slide">
+          <p>“Thank you for your time and effort, and for taking [our] Marketing to the next level. You brought clarity, alignment, and, above all, a true sense of teamwork across Europe.”</p>
+          <cite><b>Marketing team member</b> · FTSE-listed trading platform</cite>
+        </blockquote>
+        <blockquote class="slide">
+          <p>“Santiago delivered a talk on ‘Introduction to Design Thinking as a Strategic Innovation Tool’ as part of a course at Telefónica’s School of Commercial Excellence. […] The concepts were explained with clarity and simplicity, meeting the session’s objectives. Santiago’s ability to engage the audience stood out, fostering critical discussion. The participants were deeply involved in the practical exercise, and overall satisfaction with his talk was very high.”</p>
+          <cite><b>Roberto Sánchez Romero</b> · EMEAL Head of Culture &amp; Talent &amp; Diversity</cite>
+        </blockquote>
+        <blockquote class="slide">
+          <p>“I invited Santiago to teach a seminar about ‘Design Thinking’ in my course of Business at the Technical University of Catalonia. He made a great job. He is a good speaker, used clear examples adapted to young engineering students and encouraged them to participate. Students enjoyed the session and the results of the final test showed that they also understood the explanation.”</p>
+          <cite><b>Itxaso del Palacio, PhD</b> · General Partner at Notion, Board of Directors Kauffman Fellows, Associate Professor at UCL</cite>
+        </blockquote>
+      </div>
+      <div class="controls">
+        <button type="button" id="prev" aria-label="Previous testimonial">←</button>
+        <button type="button" id="next" aria-label="Next testimonial">→</button>
+        <div class="dots" id="dots" aria-hidden="true"></div>
+        <span class="count" id="count"></span>
+      </div>
+    </div>
+    <script>
+    (function(){
+      var t=document.getElementById('track'), n=t.children.length, d=document.getElementById('dots'), c=document.getElementById('count');
+      for(var i=0;i<n;i++){d.appendChild(document.createElement('span'));}
+      function idx(){return Math.round(t.scrollLeft/t.clientWidth);}
+      function upd(){var k=idx(); [].forEach.call(d.children,function(s,j){s.className=j===k?'on':'';}); c.textContent=(k+1)+' / '+n;}
+      function go(k){k=(k+n)%n; t.scrollTo({left:k*t.clientWidth});}
+      document.getElementById('prev').onclick=function(){go(idx()-1);};
+      document.getElementById('next').onclick=function(){go(idx()+1);};
+      t.addEventListener('scroll',function(){window.requestAnimationFrame(upd);});
+      t.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();go(idx()+1);} if(e.key==='ArrowLeft'){e.preventDefault();go(idx()-1);}});
+      upd();
+    })();
+    </script>
+  </div>
+</section>
+
+<section id="sharing">
+  <div class="wrap">
+    <div class="head"><span class="eyebrow">Sharing knowledge</span><h2>Where I share what I've learned</h2><p class="lede">Postgraduate modules in digital marketing and social commerce, undergraduate courses in PR and communication strategy, and in-company executive programmes. I also mentor marketers through the Comillas Alumni programme.</p></div>
+    <div class="logos">
+      <img class="xl" src="assets/logos/il3-ub.png" alt="IL3, Universitat de Barcelona"><img class="tall" src="assets/logos/icemd-esic.svg" alt="ICEMD by ESIC"><img class="" src="assets/logos/uva.svg" alt="Universidad de Valladolid"><img class="xl" src="assets/logos/upc.svg" alt="UPC, Universitat Politècnica de Catalunya"><img class="sq" src="assets/logos/telefonica.svg" alt="Telefónica"><img class="tall" src="assets/logos/comillas.svg" alt="Universidad Pontificia Comillas"><img class="tall" src="assets/logos/founderz.svg" alt="Founderz">
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <div class="head" style="margin:0"><span class="eyebrow">About</span><h2>Santi Rodríguez</h2></div>
+    <div class="about-text">
+      <p>Born in Spain, with roots in Madrid, Segovia and Barcelona. I've also lived in New Delhi and Berkeley.</p>
+      <p>As a kid I loved connect-the-dots drawings: the picture only appears once you join the numbers in order. Work feels the same to me. The interesting part happens where disciplines, people and cultures meet.</p>
+      <p>For 20+ years I've led marketing and growth at global corporations (L'Oréal, Vodafone, Adevinta) and fast-moving startups, across brand, acquisition, retention and product marketing. I do my best work linking strategy and execution, usually when something is broken or in transition.</p>
+      <p>Law and Business (ICADE), MBA from UC Berkeley.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap inner">
+    <span class="eyebrow" style="color:var(--band-muted)">Contact</span>
+    <h2>Let's talk.</h2>
+    <p>Tell me where things stand and let's connect the dots together.</p>
+    <a class="btn" href="https://calendar.app.google/U7s472umsJnMCU3NA" target="_blank" rel="noopener">Book a call</a>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <span>© 2026 Sather Bridge Capital, S.L. · <span class="ph">email@satherbridge.com</span></span>
+    <span><a href="https://www.linkedin.com/in/santiagorodriguezdemiguel" target="_blank" rel="noopener">LinkedIn</a> · Legal notice · Privacy</span>
+  </div>
+</footer>
+
+</body>
+</html>
