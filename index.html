@@ -57,11 +57,11 @@ h3{font-size:21px; line-height:1.3; font-weight:600; letter-spacing:-.01em}
 nav{position:sticky; top:env(safe-area-inset-top,0px); z-index:5; background:color-mix(in srgb, var(--bg) 80%, transparent); -webkit-backdrop-filter:saturate(180%) blur(20px); backdrop-filter:saturate(180%) blur(20px)}
 nav .wrap{display:flex; align-items:center; gap:28px; height:56px}
 .brand{font-weight:800; font-size:18px; letter-spacing:-.02em; color:var(--text); white-space:nowrap}
-.menu{display:flex; gap:20px; flex:1; min-width:0}
+.menu{display:flex; gap:28px; flex:1; min-width:0}
 .menu a{color:var(--text-2); font-size:14px; white-space:nowrap}
 .menu a:hover{color:var(--text); opacity:1}
 nav .btn{font-size:14px; padding:7px 16px}
-@media (max-width:1040px){ .menu{display:none} nav .wrap{justify-content:space-between} }
+@media (max-width:760px){ .menu{display:none} nav .wrap{justify-content:space-between} }
 
 /* hero */
 .hero{padding-block:clamp(56px, 8vw, 104px) var(--space-section)}
@@ -78,10 +78,10 @@ nav .btn{font-size:14px; padding:7px 16px}
 @media (max-width:760px){ .hero-grid{grid-template-columns:1fr} .photo{max-width:340px} .hero .photo{margin-top:0} }
 
 /* results */
-.stats{display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:clamp(24px, 4vw, 48px)}
+.stats{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:clamp(40px, 5vw, 56px) clamp(24px, 4vw, 48px)}
 .stat{display:grid; gap:8px; align-content:start}
 .stat b{font-size:clamp(40px, 5.2vw, 56px); line-height:1; font-weight:800; letter-spacing:-.035em; font-variant-numeric:tabular-nums}
-.stat span{font-size:15px; color:var(--text-2); max-width:22ch}
+.stat span{font-size:15px; color:var(--text-2); max-width:28ch}
 @media (max-width:760px){ .stats{grid-template-columns:repeat(2, minmax(0,1fr)); row-gap:40px} }
 
 /* logos */
@@ -164,7 +164,7 @@ footer a{color:var(--on-deep-2)}
 .menu-toggle{display:none; width:40px; height:40px; border:0; background:transparent; color:var(--text); cursor:pointer; padding:0}
 .menu-toggle svg{display:block; margin:auto}
 .mobile-menu{display:none}
-@media (max-width:1040px){
+@media (max-width:760px){
   .menu-toggle{display:block}
   nav .wrap{gap:12px}
   nav .brand{flex:1}
@@ -201,7 +201,7 @@ footer a{color:var(--on-deep-2)}
 .path{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:clamp(32px, 5vw, 64px); list-style:none; padding:0; margin:0}
 .path li{position:relative; padding-top:44px; display:grid; gap:10px; align-content:start}
 .path .dot{position:absolute; top:0; left:0; width:14px; height:14px; border-radius:50%; background:var(--text)}
-.path li:not(:last-child)::after{content:""; position:absolute; top:6px; left:26px; right:calc(-1 * clamp(32px, 5vw, 64px) + 12px); border-top:2px dotted var(--caption)}
+.path li:not(:last-child)::after{content:""; position:absolute; top:6px; left:26px; right:calc(-1 * clamp(32px, 5vw, 64px) + 12px); border-top:1px dotted var(--caption)}
 .path .n{font-size:14px; font-weight:600; color:var(--caption); font-variant-numeric:tabular-nums}
 .path h3{font-size:28px; font-weight:800; letter-spacing:-.025em}
 .path p{color:var(--text-2)}
@@ -212,11 +212,20 @@ footer a{color:var(--on-deep-2)}
   .path{grid-template-columns:1fr; gap:40px}
   .path li{padding-top:0; padding-left:40px}
   .path .dot{top:4px}
-  .path li:not(:last-child)::after{top:26px; left:6px; right:auto; bottom:-36px; border-top:0; border-left:2px dotted var(--caption)}
+  .path li:not(:last-child)::after{top:26px; left:6px; right:auto; bottom:-36px; border-top:0; border-left:1px dotted var(--caption)}
 }
 .hero{padding-block:clamp(56px, 8vw, 104px) clamp(48px, 6vw, 72px)}
 .metrics{padding-block:clamp(48px, 6vw, 72px)}
 .logos-section{padding-top:clamp(48px, 6vw, 72px)}
+/* services: rows separated by a fine dotted line (same line as How I work) */
+.rows{display:grid}
+.row{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.6fr); gap:clamp(16px, 4vw, 64px); padding-block:28px; border-top:1px dotted var(--caption)}
+.row:last-child{border-bottom:1px dotted var(--caption)}
+.row p{color:var(--text-2); max-width:52ch}
+@media (max-width:760px){ .row{grid-template-columns:1fr; gap:8px; padding-block:24px} }
+/* engagements: numbered from lightest to deepest support */
+.levels .item{gap:10px}
+.levels .num{font-size:clamp(48px, 6vw, 64px); line-height:1; font-weight:800; letter-spacing:-.04em; color:var(--caption); opacity:.5; font-variant-numeric:tabular-nums}
 .contact .email{font-size:17px; color:var(--on-deep-2); user-select:all}
 </style>
 </head>
@@ -228,12 +237,8 @@ footer a{color:var(--on-deep-2)}
     <div class="menu">
       <a href="#services">Services</a>
       <a href="#how">How I work</a>
-      <a href="#engagements">Engagements</a>
       <a href="#results">Results</a>
-      <a href="#testimonials">Testimonials</a>
       <a href="#about">About</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#contact">Contact</a>
     </div>
     <a class="btn" href="https://calendar.app.google/U7s472umsJnMCU3NA" target="_blank" rel="noopener">Book a call</a>
     <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
@@ -243,11 +248,8 @@ footer a{color:var(--on-deep-2)}
   <div class="mobile-menu" id="mobile-menu" hidden>
     <a href="#services">Services</a>
     <a href="#how">How I work</a>
-    <a href="#engagements">Engagements</a>
     <a href="#results">Results</a>
-    <a href="#testimonials">Testimonials</a>
     <a href="#about">About</a>
-    <a href="#teaching">Teaching</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
@@ -282,10 +284,12 @@ footer a{color:var(--on-deep-2)}
 <section class="band metrics" id="numbers" aria-label="Results in numbers">
   <div class="wrap">
     <div class="stats">
-      <div class="stat"><b>€150M</b><span>marketing budget managed across 11 markets</span></div>
-      <div class="stat"><b>+345%</b><span>paid-media conversion rate in one quarter</span></div>
-      <div class="stat"><b>€5M+</b><span>post-acquisition synergies</span></div>
-      <div class="stat"><b>+67%</b><span>eCommerce revenue, year on year</span></div>
+      <div class="stat"><b>+345%</b><span>Paid-media conversion rate</span></div>
+      <div class="stat"><b>€5M+</b><span>Post-acquisition synergies</span></div>
+      <div class="stat"><b>+67%</b><span>eCommerce revenue growth YoY</span></div>
+      <div class="stat"><b>15+</b><span>Product launches</span></div>
+      <div class="stat"><b>5+</b><span>Brand launches and rebrands</span></div>
+      <div class="stat"><b>12+</b><span>Marketplace brands on one positioning framework</span></div>
     </div>
   </div>
 </section>
@@ -307,11 +311,11 @@ footer a{color:var(--on-deep-2)}
 <section class="band" id="services">
   <div class="wrap">
     <div class="head"><p class="label">Services</p><h2>What I can help you change.</h2></div>
-    <div class="grid2">
-      <div class="item"><h3>Marketing operating model</h3><p>Redesign structure, roles, workflows, capabilities and decision-making for an AI-first organization.</p></div>
-      <div class="item"><h3>Go-to-market</h3><p>Clarify target segments, positioning, value propositions and commercial priorities.</p></div>
-      <div class="item"><h3>Team and leadership</h3><p>Align teams, accountability, skills and leadership around business outcomes.</p></div>
-      <div class="item"><h3>AI-first execution</h3><p>Identify where AI, automation and redesigned processes can improve marketing productivity and performance.</p></div>
+    <div class="rows">
+      <div class="row"><h3>Marketing operating model</h3><p>Redesign structure, roles, workflows, capabilities and decision-making for an AI-first organization.</p></div>
+      <div class="row"><h3>Go-to-market</h3><p>Clarify target segments, positioning, value propositions and commercial priorities.</p></div>
+      <div class="row"><h3>Team and leadership</h3><p>Align teams, accountability, skills and leadership around business outcomes.</p></div>
+      <div class="row"><h3>AI-first execution</h3><p>Identify where AI, automation and redesigned processes can improve marketing productivity and performance.</p></div>
     </div>
   </div>
 </section>
@@ -330,10 +334,10 @@ footer a{color:var(--on-deep-2)}
 <section class="band" id="engagements">
   <div class="wrap">
     <div class="head"><p class="label">Engagements</p><h2>The level of support you need.</h2></div>
-    <div class="grid3">
-      <div class="item"><h3>Transformation engagement</h3><p>Diagnose the current organization, redesign the operating model and establish a practical implementation roadmap.</p></div>
-      <div class="item"><h3>Fractional CMO</h3><p>Provide senior marketing leadership, direction and hands-on execution without a full-time appointment.</p></div>
-      <div class="item"><h3>Scoped advisory</h3><p>Tackle a defined challenge in marketing organization, GTM or AI adoption.</p></div>
+    <div class="grid3 levels">
+      <div class="item"><span class="num" aria-hidden="true">01</span><h3>Scoped advisory</h3><p>I solve one defined challenge in your marketing organization, go-to-market or AI adoption.</p></div>
+      <div class="item"><span class="num" aria-hidden="true">02</span><h3>Transformation engagement</h3><p>I diagnose your marketing organization, redesign the operating model and set a practical roadmap to implement it.</p></div>
+      <div class="item"><span class="num" aria-hidden="true">03</span><h3>Fractional CMO</h3><p>I provide senior marketing leadership, direction and hands-on execution, without a full-time hire.</p></div>
     </div>
   </div>
 </section>
@@ -352,10 +356,8 @@ footer a{color:var(--on-deep-2)}
           <h3>Turning around a multi-market marketing organization</h3>
           <div><span class="k">Context</span><p>Marketing had the people and the budget to grow faster. The missing pieces were shared goals tied to business impact and clear ownership of regional budgets.</p></div>
           <div><span class="k">What I did</span><ul>
-            <li><b>Org design:</b> restructured the marketing leadership and the team in the first two weeks.</li>
-            <li><b>Providers:</b> cancelled underperforming agency and supplier contracts.</li>
-            <li><b>Ways of working:</b> two OKRs replacing task-based goals, plus impact KPIs.</li>
-            <li><b>Measurement:</b> a measurement framework built from scratch.</li>
+            <li><b>Team and providers:</b> restructured the marketing leadership and the team in the first two weeks, and cancelled underperforming agency and supplier contracts.</li>
+            <li><b>Goals and measurement:</b> two OKRs replacing task-based goals, impact KPIs and a measurement framework built from scratch.</li>
             <li><b>Budget:</b> the first regional budget built on unit economics.</li></ul></div>
           <div><span class="k">Results</span><p>Paid-media conversion rate +345% in one quarter. Vendor costs down 15%+ year on year. A simpler structure, clear accountability and a handover package the team now owns. Team survey at handover: 4.4/5 (8 responses).</p></div>
         </div>
@@ -363,28 +365,31 @@ footer a{color:var(--on-deep-2)}
       <article class="case">
         <div class="case-meta">
           <span class="client">Adevinta</span>
-          <span class="big">12+</span><span class="big-l">marketplace brands on one positioning playbook</span>
+          <span class="big">€5M+</span><span class="big-l">Post-acquisition synergies</span><span class="scope">From marketing integration</span>
         </div>
         <div class="case-body">
           <h3>Marketing excellence across 11 markets</h3>
           <div><span class="k">Context</span><p>One of the world's largest online classifieds groups. Local marketing teams worked at different maturity levels, and the central team had no line authority over them. After the eBay Classifieds acquisition, two marketing teams had to merge.</p></div>
           <div><span class="k">What I did</span><ul>
-            <li>Built a center of excellence: capability assessments, playbooks (positioning, SEO, CRM), training and a community of 50+ marketers.</li>
-            <li>Launched the new Adevinta corporate brand in under 3 months, ahead of the IPO.</li>
-            <li>Merged the two teams and brought performance marketing in-house.</li></ul></div>
+            <li><b>Center of excellence:</b> capability assessments, playbooks (positioning, SEO, CRM), training and a community of 50+ marketers.</li>
+            <li><b>Corporate brand:</b> launched the new Adevinta corporate brand in under 3 months, ahead of the IPO.</li>
+            <li><b>Team integration:</b> merged the two teams and brought performance marketing in-house.</li></ul></div>
           <div><span class="k">Results</span><p>Internal satisfaction above 4.5/5. SEO coverage from under half of the marketplaces to 100% in 12 months. +10% conversion from the CRM playbook. €5M+ in synergies.</p></div>
         </div>
       </article>
       <article class="case">
         <div class="case-meta">
           <span class="client">Spanish energy-tech scale-up</span>
-          <span class="big">ABM</span><span class="big-l">built from scratch for a B2B scale-up</span>
+          <span class="big">ABM</span><span class="big-l">Built from scratch</span><span class="scope">For a B2B growth-stage business</span>
         </div>
         <div class="case-body">
           <h3>Building ABM and go-to-market from scratch</h3>
           <div><span class="k">Context</span><p>A growth-stage B2B company with no ABM capability. Sales and marketing measured activity, not outcomes.</p></div>
-          <div><span class="k">What I did</span><p>Audited marketing and growth practices. Redesigned segmentation, targeting and the value proposition per segment. Built ABM and sales alignment, plus a framework to prioritize GTM initiatives.</p></div>
-          <div><span class="k">Results</span><p>A clear map of segments with a value proposition for each, an ABM motion that sales and marketing run together, and a shared way to decide which GTM initiatives go first.</p></div>
+          <div><span class="k">What I did</span><ul>
+            <li><b>Audit:</b> reviewed marketing and growth practices.</li>
+            <li><b>Segments and value proposition:</b> redesigned segmentation, targeting and the value proposition for each segment.</li>
+            <li><b>ABM and priorities:</b> built ABM with sales alignment, plus a framework to prioritize GTM initiatives.</li></ul></div>
+          <div><span class="k">Results</span><p>A clear segmentation and value proposition for each target group, an ABM approach shared by sales and marketing, and a common framework for prioritizing go-to-market initiatives.</p></div>
         </div>
       </article>
     </div>
@@ -489,7 +494,7 @@ footer a{color:var(--on-deep-2)}
 <footer>
   <div class="wrap">
     <span>© 2026 Sather Bridge Capital, S.L. · Santiago Rodríguez de Miguel</span>
-    <span><a href="https://www.linkedin.com/in/santiagorodriguezdemiguel" target="_blank" rel="noopener">LinkedIn</a> · <a href="legal.html">Legal notice &amp; privacy</a></span>
+    <span><a href="https://www.linkedin.com/in/santiagorodriguezdemiguel" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/santiagordm" target="_blank" rel="noopener">GitHub</a> · <a href="legal.html">Legal notice &amp; privacy</a></span>
   </div>
 </footer>
 
