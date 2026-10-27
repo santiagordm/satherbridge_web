@@ -180,7 +180,7 @@ footer a{color:var(--on-deep-2)}
 .logo-row::-webkit-scrollbar{display:none}
 .logo-cell{flex:1 0 auto; display:flex; align-items:center; height:56px; scroll-snap-align:start}
 .logo-cell img{height:24px; width:auto; max-width:130px; filter:grayscale(1) brightness(0); opacity:.45; transition:opacity var(--ease)}
-.logo-cell img.sq{height:30px} .logo-cell img.tall{height:34px} .logo-cell img.xl{height:46px; max-width:150px}
+.logo-cell img.sq{height:30px} .logo-cell img.tall{height:34px} .logo-cell img.xl{height:46px; max-width:150px} .logo-cell img.flat{height:16px}
 .logo-cell img:hover{opacity:.75}
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .logo-cell img{filter:grayscale(1) brightness(0) invert(1); opacity:.55} }
 :root[data-theme="dark"] .logo-cell img{filter:grayscale(1) brightness(0) invert(1); opacity:.55}
@@ -189,6 +189,14 @@ footer a{color:var(--on-deep-2)}
   .logo-row{-webkit-mask-image:linear-gradient(to right, #000 78%, transparent); mask-image:linear-gradient(to right, #000 78%, transparent)}
 }
 .logos-section{padding-block:0 clamp(56px, 7vw, 88px)}
+/* company logos: all eight on one line on desktop, optically balanced */
+@media (min-width:761px){
+  .logos-section .logo-cell{flex:0 0 auto}
+  .logos-section .logo-cell img{height:20px; max-width:none}
+  .logos-section .logo-cell img.flat{height:14px}
+  .logos-section .logo-cell img.heavy{height:16px}
+}
+@media (min-width:1000px){ .logos-section .logo-row{justify-content:space-between; gap:24px; overflow:visible} }
 
 /* services and engagements: text columns, no boxes */
 .grid2{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:48px clamp(48px, 7vw, 96px)}
@@ -297,13 +305,14 @@ footer a{color:var(--on-deep-2)}
 <section class="logos-section" aria-label="Companies I've worked with">
   <div class="wrap">
     <div class="logo-row">
-      <div class="logo-cell"><img src="assets/logos/loreal.svg" alt="L'Oréal"></div>
-      <div class="logo-cell"><img class="sq" src="assets/logos/vodafone.svg" alt="Vodafone"></div>
-      <div class="logo-cell"><img src="assets/logos/privalia.png" alt="Privalia"></div>
       <div class="logo-cell"><img src="assets/logos/adevinta.svg" alt="Adevinta"></div>
       <div class="logo-cell"><img src="assets/logos/schibsted.svg" alt="Schibsted"></div>
-      <div class="logo-cell"><img src="assets/logos/milbby.png" alt="Milbby"></div>
+      <div class="logo-cell"><img src="assets/logos/vodafone.svg" alt="Vodafone"></div>
+      <div class="logo-cell"><img class="flat" src="assets/logos/tansley.png" alt="Tansley"></div>
+      <div class="logo-cell"><img class="heavy" src="assets/logos/milbby.png" alt="Milbby"></div>
+      <div class="logo-cell"><img src="assets/logos/privalia.png" alt="Privalia"></div>
       <div class="logo-cell"><img src="assets/logos/salesforce.svg" alt="Salesforce"></div>
+      <div class="logo-cell"><img src="assets/logos/loreal.svg" alt="L'Oréal"></div>
     </div>
   </div>
 </section>
@@ -365,16 +374,16 @@ footer a{color:var(--on-deep-2)}
       <article class="case">
         <div class="case-meta">
           <span class="client">Adevinta</span>
-          <span class="big">€5M+</span><span class="big-l">Post-acquisition synergies</span><span class="scope">From marketing integration</span>
+          <span class="big">€5M+</span><span class="big-l">Post-acquisition synergies</span>
         </div>
         <div class="case-body">
-          <h3>Marketing excellence across 11 markets</h3>
-          <div><span class="k">Context</span><p>One of the world's largest online classifieds groups. Local marketing teams worked at different maturity levels, and the central team had no line authority over them. After the eBay Classifieds acquisition, two marketing teams had to merge.</p></div>
+          <h3>Redesigning a group marketing organization across 11 markets</h3>
+          <div><span class="k">Context</span><p>One of the world’s largest online classifieds groups, with marketplaces at very different levels of marketing maturity. I joined the central marketing team in product marketing and went on to lead it. After the eBay Classifieds acquisition, two marketing organizations had to become one.</p></div>
           <div><span class="k">What I did</span><ul>
-            <li><b>Center of excellence:</b> capability assessments, playbooks (positioning, SEO, CRM), training and a community of 50+ marketers.</li>
-            <li><b>Corporate brand:</b> launched the new Adevinta corporate brand in under 3 months, ahead of the IPO.</li>
-            <li><b>Team integration:</b> merged the two teams and brought performance marketing in-house.</li></ul></div>
-          <div><span class="k">Results</span><p>Internal satisfaction above 4.5/5. SEO coverage from under half of the marketplaces to 100% in 12 months. +10% conversion from the CRM playbook. €5M+ in synergies.</p></div>
+            <li><b>Operating model:</b> turned the central team into a center of excellence that directly ran brand tracking, an internal performance marketing agency, CRM, marketplace liquidity and martech.</li>
+            <li><b>Integration:</b> led the merger of the two marketing teams around shared KPIs, brought eBay Classifieds’ performance setup into the group model and rationalized marketing mix modelling and brand tracking.</li>
+            <li><b>Capability:</b> assessments, playbooks, training and a community of 50+ marketers across 11 markets in Europe, Latin America and beyond.</li></ul></div>
+          <div><span class="k">Results</span><p>€5M+ in post-acquisition synergies. One marketing organization working to shared KPIs. Internal satisfaction above 4.5/5.</p></div>
         </div>
       </article>
       <article class="case">
@@ -384,7 +393,7 @@ footer a{color:var(--on-deep-2)}
         </div>
         <div class="case-body">
           <h3>Building ABM and go-to-market from scratch</h3>
-          <div><span class="k">Context</span><p>A growth-stage B2B company with no ABM capability. Sales and marketing measured activity, not outcomes.</p></div>
+          <div><span class="k">Context</span><p>A growth-stage B2B company with no account-based marketing (ABM) capability. Sales and marketing tracked activity, but lacked shared, outcome-based goals.</p></div>
           <div><span class="k">What I did</span><ul>
             <li><b>Audit:</b> reviewed marketing and growth practices.</li>
             <li><b>Segments and value proposition:</b> redesigned segmentation, targeting and the value proposition for each segment.</li>
@@ -457,7 +466,7 @@ footer a{color:var(--on-deep-2)}
     <div class="about-text">
       <p>As a kid, I loved connect-the-dots drawings. Much like in work and life, a more interesting picture emerges when you bring disciplines, people and cultures together.</p>
       <p>I’ve spent more than 20 years leading marketing and growth in global corporations and fast-growing businesses, helping them adapt to change and find new ways to grow.</p>
-      <p>At Adevinta, one of the world’s largest online classifieds groups, I spent eight years as Director of Growth and Head of Marketing. I led a team of 15 across 11 markets in Europe and Latin America, integrated eBay Classifieds marketing teams and served as interim CMO in Italy during its shift to a transactional model.</p>
+      <p>At Adevinta, one of the world’s largest online classifieds groups, I spent eight years as Director of Growth and Head of Marketing. I led a team of 15 across 11 markets in Europe, Latin America and beyond, integrated eBay Classifieds marketing teams and served as interim CMO in Italy during its shift to a transactional model.</p>
       <p>Earlier in my career, I worked in brand and acquisition at L’Oréal (Lancôme), Privalia and Vodafone. At Tansley (Milbby), I rebuilt the eCommerce channel. Since 2024, I’ve worked as an Executive Marketing Advisor and Fractional CMO, helping companies rethink marketing for the AI era. I also co-founded an AI-native investor education platform.</p>
       <p>I studied Law and Business Administration at ICADE (Comillas Pontifical University) and completed my MBA at UC Berkeley’s Haas School of Business.</p>
     </div>
