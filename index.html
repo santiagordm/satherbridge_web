@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
 <title>Santiago Rodríguez de Miguel · Fractional CMO &amp; Executive Marketing Advisor | Sather Bridge</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="I transform marketing organizations for the AI era. Fractional CMO and advisory for B2B and B2C companies up to €500M in revenue. Barcelona / remote.">
@@ -10,21 +11,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
 <style>
-/* Layout: one scroll, left-aligned editorial blocks, sections separated by space and alternating white / warm off-white bands. No cards, no borders. Accent only on buttons and links. See DESIGN.md. */
+/* Light only (no dark theme), by decision 2026-10-28. Layout: one scroll, left-aligned editorial blocks, sections separated by space and alternating white / warm off-white bands. No cards, no borders. Accent only on buttons and links. See DESIGN.md. */
 :root{
   --bg:#FFFFFF; --band:#FAFAF7; --text:#1D1D1F; --text-2:#6E6E73; --caption:#86868B;
   --accent:#1C786F; --on-accent:#FFFFFF; --deep:#1D1D1F; --on-deep:#F5F5F7; --on-deep-2:#A1A1A6;
   --font:"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  --ease:300ms ease-in-out;
+  --ease:300ms ease-in-out; color-scheme:light;
   --max:980px; --measure:640px;
   --space-section:clamp(72px, 10vw, 120px);
 }
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
-  --bg:#000000; --band:#1D1D1F; --text:#F5F5F7; --text-2:#A1A1A6; --caption:#86868B;
-  --accent:#4FB3A6; --on-accent:#000000; --deep:#1D1D1F; --on-deep:#F5F5F7; --on-deep-2:#A1A1A6; color-scheme:dark }}
-:root[data-theme="dark"]{
-  --bg:#000000; --band:#1D1D1F; --text:#F5F5F7; --text-2:#A1A1A6; --caption:#86868B;
-  --accent:#4FB3A6; --on-accent:#000000; --deep:#1D1D1F; --on-deep:#F5F5F7; --on-deep-2:#A1A1A6; color-scheme:dark }
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth; scroll-padding-top:64px; -webkit-text-size-adjust:100%}
@@ -56,25 +51,22 @@ h3{font-size:21px; line-height:1.3; font-weight:600; letter-spacing:-.01em}
 /* nav */
 nav{position:sticky; top:env(safe-area-inset-top,0px); z-index:5; background:color-mix(in srgb, var(--bg) 80%, transparent); -webkit-backdrop-filter:saturate(180%) blur(20px); backdrop-filter:saturate(180%) blur(20px)}
 nav .wrap{display:flex; align-items:center; gap:28px; height:56px}
-.brand{font-weight:800; font-size:18px; letter-spacing:-.02em; color:var(--text); white-space:nowrap}
+.brand{font-weight:800; font-size:20px; letter-spacing:-.02em; color:var(--text); white-space:nowrap}
 .menu{display:flex; gap:28px; flex:1; min-width:0}
 .menu a{color:var(--text-2); font-size:14px; white-space:nowrap}
 .menu a:hover{color:var(--text); opacity:1}
 nav .btn{font-size:14px; padding:7px 16px}
-@media (max-width:760px){ .menu{display:none} nav .wrap{justify-content:space-between} }
+@media (max-width:860px){ .menu{display:none} nav .wrap{justify-content:space-between} }
 
 /* hero */
 .hero{padding-block:clamp(56px, 8vw, 104px) var(--space-section)}
 .hero-grid{display:grid; grid-template-columns:minmax(0,1.5fr) minmax(0,1fr); gap:clamp(32px, 6vw, 72px); align-items:start}
-.hero .photo{margin-top:38px}
+.hero .photo{margin-top:72px}
 .hero h1{font-size:clamp(40px, 6.4vw, 64px); line-height:1.04; font-weight:800; letter-spacing:-.035em; margin-block:16px 24px}
 .hero .lede{color:var(--text-2)}
 .ctas{display:flex; gap:16px; flex-wrap:wrap; align-items:center; margin-top:32px}
 .photo{margin:0; aspect-ratio:4/5; max-width:100%; border-radius:18px; overflow:hidden; background:var(--band)}
 .photo img{width:100%; height:100%; object-fit:cover; object-position:50% 20%; display:block}
-.bridge{margin-top:48px; max-width:440px}
-.bridge svg{width:100%; height:auto; display:block}
-.bridge text{font:600 11px var(--font); letter-spacing:.08em; fill:var(--caption)}
 @media (max-width:760px){ .hero-grid{grid-template-columns:1fr} .photo{max-width:340px} .hero .photo{margin-top:0} }
 
 /* results */
@@ -92,8 +84,6 @@ nav .btn{font-size:14px; padding:7px 16px}
 .logos img.tall{height:34px}
 .logos img.xl{height:46px; max-width:160px}
 .logos img:hover{opacity:.75}
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .logos img{filter:grayscale(1) brightness(0) invert(1); opacity:.55} }
-:root[data-theme="dark"] .logos img{filter:grayscale(1) brightness(0) invert(1); opacity:.55}
 
 /* services */
 .svc{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(48px, 7vw, 96px)}
@@ -164,14 +154,18 @@ footer a{color:var(--on-deep-2)}
 .menu-toggle{display:none; width:40px; height:40px; border:0; background:transparent; color:var(--text); cursor:pointer; padding:0}
 .menu-toggle svg{display:block; margin:auto}
 .mobile-menu{display:none}
-@media (max-width:760px){
+@media (max-width:860px){
   .menu-toggle{display:block}
-  nav .wrap{gap:12px}
-  nav .brand{flex:1}
+  nav .wrap{gap:8px}
+  nav .brand{flex:1; min-width:0; font-size:clamp(15px, 5vw, 20px); line-height:1.1}
+  nav .brand .l2{display:block}
+  nav .btn{font-size:13px; padding:6px 10px}
+  .menu-toggle{width:32px; margin-right:-4px}
   .mobile-menu{display:grid; padding-block:8px 20px; padding-left:max(16px, env(safe-area-inset-left,0px)); padding-right:max(16px, env(safe-area-inset-right,0px))}
   .mobile-menu[hidden]{display:none}
   .mobile-menu a{color:var(--text); font-size:22px; font-weight:600; padding-block:8px; letter-spacing:-.01em}
 }
+.hero .who{font-size:clamp(16px, 4vw, 18px); white-space:nowrap; line-height:1.3; font-weight:600; letter-spacing:-.01em; color:var(--text); margin-bottom:4px}
 .hero .creds{font-size:16px; color:var(--text-2); max-width:var(--measure); margin-top:16px}
 
 /* logo rows: one line; swipe on phones */
@@ -182,8 +176,6 @@ footer a{color:var(--on-deep-2)}
 .logo-cell img{height:24px; width:auto; max-width:130px; filter:grayscale(1) brightness(0); opacity:.45; transition:opacity var(--ease)}
 .logo-cell img.sq{height:30px} .logo-cell img.tall{height:34px} .logo-cell img.xl{height:46px; max-width:150px} .logo-cell img.flat{height:16px}
 .logo-cell img:hover{opacity:.75}
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .logo-cell img{filter:grayscale(1) brightness(0) invert(1); opacity:.55} }
-:root[data-theme="dark"] .logo-cell img{filter:grayscale(1) brightness(0) invert(1); opacity:.55}
 @media (max-width:760px){
   .logo-cell{flex:0 0 40%; justify-content:center}
   .logo-row{-webkit-mask-image:linear-gradient(to right, #000 78%, transparent); mask-image:linear-gradient(to right, #000 78%, transparent)}
@@ -222,7 +214,7 @@ footer a{color:var(--on-deep-2)}
   .path .dot{top:4px}
   .path li:not(:last-child)::after{top:26px; left:6px; right:auto; bottom:-36px; border-top:0; border-left:1px dotted var(--caption)}
 }
-.hero{padding-block:clamp(56px, 8vw, 104px) clamp(48px, 6vw, 72px)}
+.hero{padding-block:clamp(12px, 5vw, 64px) clamp(48px, 6vw, 72px)}
 .metrics{padding-block:clamp(48px, 6vw, 72px)}
 .logos-section{padding-top:clamp(48px, 6vw, 72px)}
 /* services: rows separated by a fine dotted line (same line as How I work) */
@@ -234,6 +226,19 @@ footer a{color:var(--on-deep-2)}
 /* engagements: numbered from lightest to deepest support */
 .levels .item{gap:10px}
 .levels .num{font-size:clamp(48px, 6vw, 64px); line-height:1; font-weight:800; letter-spacing:-.04em; color:var(--caption); opacity:.5; font-variant-numeric:tabular-nums}
+/* Motion: things appear in order when you reach them. Only runs with JS (html.js); without it everything is visible. */
+.js .path li:not(:last-child)::after{transform-origin:left; transition:transform 900ms ease-in-out}
+.js .path .dot{transition:transform 400ms ease-in-out}
+.js .path:not(.in) li:not(:last-child)::after{transform:scaleX(0)}
+.js .path:not(.in) .dot{transform:scale(.4)}
+.js .path li:nth-child(2)::after,.js .path li:nth-child(2) .dot{transition-delay:700ms}
+.js .path li:nth-child(3) .dot{transition-delay:1400ms}
+@media (max-width:760px){ .js .path li:not(:last-child)::after{transform-origin:top} .js .path:not(.in) li:not(:last-child)::after{transform:scaleY(0)} }
+.js .levels .num,.js .case .big,.js .case .big-l{transition:opacity 600ms ease-in-out, transform 600ms ease-in-out}
+.js .levels:not(.in) .num,.js .case:not(.in) .big,.js .case:not(.in) .big-l{opacity:0; transform:translateY(10px)}
+.js .levels .item:nth-child(2) .num{transition-delay:300ms}
+.js .levels .item:nth-child(3) .num{transition-delay:600ms}
+.js .case .big-l{transition-delay:250ms}
 .contact .email{font-size:17px; color:var(--on-deep-2); user-select:all}
 </style>
 </head>
@@ -241,7 +246,7 @@ footer a{color:var(--on-deep-2)}
 
 <nav aria-label="Main">
   <div class="wrap">
-    <a class="brand" href="#top">Sather Bridge</a>
+    <a class="brand" href="#top">Santiago Rodríguez <span class="l2">de Miguel</span></a>
     <div class="menu">
       <a href="#services">Services</a>
       <a href="#how">How I work</a>
@@ -265,6 +270,7 @@ footer a{color:var(--on-deep-2)}
 <section class="hero" id="top">
   <div class="wrap hero-grid">
     <div>
+      <p class="who">Sather Bridge</p>
       <p class="label">Executive Marketing Advisor · Fractional CMO</p>
       <h1>I transform marketing organizations for the AI era.</h1>
       <p class="lede">I help B2B and B2C companies redesign marketing for an AI-first world: how teams are structured, how work gets done, how go-to-market decisions are made and where AI delivers measurable business value.</p>
@@ -272,17 +278,6 @@ footer a{color:var(--on-deep-2)}
       <div class="ctas">
         <a class="btn" href="https://calendar.app.google/U7s472umsJnMCU3NA" target="_blank" rel="noopener">Book a call</a>
         <a class="btn-link" href="#results">See results</a>
-      </div>
-      <div class="bridge" aria-hidden="true">
-        <svg viewBox="0 0 440 64">
-          <path d="M8 46 Q220 -14 432 46" fill="none" stroke="var(--caption)" stroke-width="1.25"/>
-          <line x1="8" y1="46" x2="432" y2="46" stroke="var(--caption)" stroke-width="1" opacity=".5"/>
-          <g stroke="var(--caption)" stroke-width="1" opacity=".5">
-            <line x1="85" y1="46" x2="85" y2="26"/><line x1="155" y1="46" x2="155" y2="17"/><line x1="220" y1="46" x2="220" y2="15"/><line x1="285" y1="46" x2="285" y2="17"/><line x1="355" y1="46" x2="355" y2="26"/>
-          </g>
-          <circle cx="8" cy="46" r="3.5" fill="var(--text)"/><circle cx="432" cy="46" r="3.5" fill="var(--text)"/>
-          <text x="8" y="62">STRATEGY</text><text x="432" y="62" text-anchor="end">EXECUTION</text>
-        </svg>
       </div>
     </div>
     <figure class="photo"><img src="assets/img/santi-rodriguez.jpg" alt="Santiago Rodríguez de Miguel" width="800" height="1129"></figure>
@@ -368,7 +363,7 @@ footer a{color:var(--on-deep-2)}
             <li><b>Team and providers:</b> restructured the marketing leadership and the team in the first two weeks, and cancelled underperforming agency and supplier contracts.</li>
             <li><b>Goals and measurement:</b> two OKRs replacing task-based goals, impact KPIs and a measurement framework built from scratch.</li>
             <li><b>Budget:</b> the first regional budget built on unit economics.</li></ul></div>
-          <div><span class="k">Results</span><p>Paid-media conversion rate +345% in one quarter. Vendor costs down 15%+ year on year. A simpler structure, clear accountability and a handover package the team now owns. Team survey at handover: 4.4/5 (8 responses).</p></div>
+          <div><span class="k">Results</span><p>Paid-media conversion rate +345% in one quarter. Vendor costs down 15%+ year on year. A simpler structure, clear accountability and a handover package the team now owns.</p></div>
         </div>
       </article>
       <article class="case">
@@ -378,7 +373,7 @@ footer a{color:var(--on-deep-2)}
         </div>
         <div class="case-body">
           <h3>Redesigning a group marketing organization across 11 markets</h3>
-          <div><span class="k">Context</span><p>One of the world’s largest online classifieds groups, with marketplaces at very different levels of marketing maturity. I joined the central marketing team in product marketing and went on to lead it. After the eBay Classifieds acquisition, two marketing organizations had to become one.</p></div>
+          <div><span class="k">Context</span><p>One of the world’s largest online classifieds groups, with marketplaces at very different levels of marketing maturity. I joined the central marketing team in product marketing and was later promoted to lead it. After the eBay Classifieds acquisition, two marketing organizations had to become one.</p></div>
           <div><span class="k">What I did</span><ul>
             <li><b>Operating model:</b> turned the central team into a center of excellence that directly ran brand tracking, an internal performance marketing agency, CRM, marketplace liquidity and martech.</li>
             <li><b>Integration:</b> led the merger of the two marketing teams around shared KPIs, brought eBay Classifieds’ performance setup into the group model and rationalized marketing mix modelling and brand tracking.</li>
@@ -468,7 +463,7 @@ footer a{color:var(--on-deep-2)}
       <p>I’ve spent more than 20 years leading marketing and growth in global corporations and fast-growing businesses, helping them adapt to change and find new ways to grow.</p>
       <p>At Adevinta, one of the world’s largest online classifieds groups, I spent eight years as Director of Growth and Head of Marketing. I led a team of 15 across 11 markets in Europe, Latin America and beyond, integrated eBay Classifieds marketing teams and served as interim CMO in Italy during its shift to a transactional model.</p>
       <p>Earlier in my career, I worked in brand and acquisition at L’Oréal (Lancôme), Privalia and Vodafone. At Tansley (Milbby), I rebuilt the eCommerce channel. Since 2024, I’ve worked as an Executive Marketing Advisor and Fractional CMO, helping companies rethink marketing for the AI era. I also co-founded an AI-native investor education platform.</p>
-      <p>I studied Law and Business Administration at ICADE (Comillas Pontifical University) and completed my MBA at UC Berkeley’s Haas School of Business.</p>
+      <p>I studied Law and Business Administration at ICADE (Universidad Pontificia Comillas) and completed my MBA at UC Berkeley’s Haas School of Business.</p>
     </div>
   </div>
 </section>
@@ -521,6 +516,12 @@ footer a{color:var(--on-deep-2)}
   document.getElementById('next').onclick=function(){go(idx()+1);};
   t.addEventListener('scroll',function(){window.requestAnimationFrame(upd);});
   t.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();go(idx()+1);} if(e.key==='ArrowLeft'){e.preventDefault();go(idx()-1);}});
+  var els=document.querySelectorAll('.path,.levels,.case');
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    document.documentElement.classList.add('js');
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.35});
+    els.forEach(function(e){var r=e.getBoundingClientRect(); if(r.top<innerHeight*.8 && r.bottom>0) e.classList.add('in'); else io.observe(e);});
+  }
   upd();
 })();
 </script>
